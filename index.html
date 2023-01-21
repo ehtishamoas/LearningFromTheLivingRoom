@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tree School</title>
+      <!-- CSS from Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <!--Tailwind CSS-->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style type="text/tailwindcss">
+          @layer components {
+            .card {
+              @apply flex items-center justify-center flex-col gap-2 p-5 w-full sm:w-72 h-full bg-gray-100 border rounded-2xl
+            }
+          }
+      </style>
+      <!--Tailwind CSS-->
+
+      <!--Font-Awesome-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container text-center">
+
+      <div class="row">
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 1">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal1">
+            <img src="./Images/frames/project1.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 1">
+          </button>
+        </div>
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 1">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal2">
+            <img src="./Images/frames/project2.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 2">
+          </button>
+        </div>
+
+        <div class = "col p-0">
+        </div>
+
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 1">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal9">
+            <img src="./Images/frames/project9.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 9">
+          </button>
+        </div>
+
+        <div class = "col p-0">
+        </div>
+
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 1">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal3">
+            <img src="./Images/frames/project3.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 3">
+          </button>
+        </div>
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 1">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal4">
+            <img src="./Images/frames/project4.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 4">
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 5">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal5">
+            <img src="./Images/frames/project5.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 5">
+          </button>
+        </div>
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 6">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal6">
+            <img src="./Images/frames/project6.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 6">
+          </button>
+        </div>
+
+        <div class = "col p-0">
+        </div>
+        <div class = "col p-0">
+        </div>
+        <div class = "col p-0">
+        </div>
+
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 7">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal7">
+            <img src="./Images/frames/project7.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 7">
+          </button>
+        </div>
+        <div class="col p-0">
+          <img src="./Images/branch.png" class="img-fluid center-block d-block mx-auto" width = '50vw' alt="Branch 8">
+          <button type="button" class="btn btn-default py-0" data-bs-toggle="modal" data-bs-target="#Modal8">
+            <img src="./Images/frames/project8.png" class="img-fluid center-block d-block mx-auto" width="100vh" alt="Project 8">
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal1Label">Tree School to The Concrete Tent</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2">Redefining education, forging a lost connection with one's land, or a new learning environment full of limitless possibilities - find out what The Tree School means to its newest cohort!</div>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://drive.google.com/file/d/1rjH2Y6D1otMpgqL7wyY9KFdlsulmq0v1/preview" allowfullscreen></iframe>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Diana Alibekova, Alya Alkhemeiri, and Ibad Hasan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="Modal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal2Label">Learning In Our Collective Present</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <img src="./StudentsData/KnC/Thumbnail.png" class="img-fluid center-block d-block mx-auto"  alt="Project 2">
+            <div class="d-flex justify-content-center py-2">
+            <audio controls>
+              <source src="./StudentsData/KnC/SoundArt.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Kartikey Singhal and Cadence Cheah</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="Modal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal3Label">The Tree School In One Word</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2">This project aims to collect one word from each participant. In these days, we may have different and personal experiences that can be summed up into one unique word, but these words together form the comprehensive and collective idea of the tree schools.</div>
+
+            <div class="ratio ratio-16x9">
+              <iframe src="https://prezi.com/p/embed/SzcFqS2US7n3ecu3P1qk/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Rose Chen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 Modal -->
+    <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="Modal4Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal4Label">Branching Out?</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2">In the nature of a tree being made up of many different branches, this is a compilation of what specific tree each of us would hold our own branches of The Tree School under (influenced by our many different backgrounds and perspectives;):</div>
+            <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/c6zozy7hcfx0zk8w" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Nadia Chan, Kotryna Karpauskaite, and Dilnaz Amantayeva</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 Modal -->
+    <div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="Modal5Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal5Label">Visualizing J-Term Experience</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2">For this project, we asked the participants of the “Learning From The Trees” project in the concrete tent to visualize their experience of the J-term course and the Tree School activation by drawing on a canvas.</div>
+
+            <div class="ratio ratio-16x9">
+              <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRuLVE0FI-ROWejYDzJ5Ij3r0iFHkpL6wQeS479Uf6wRJj4Im-GqI6WXttk93r8mzatBqkIl2EeS1Si/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Yasmin Alshurafa and Fatma Albastaki</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 6 Modal -->
+    <div class="modal fade" id="Modal6" tabindex="-1" aria-labelledby="Modal6Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal6Label">Frames</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2">Over the three week course, I was exposed to the idea of frames. What frames my life? What frames do I look through? How important are frames? This section includes an article which includes some of my key takeaways on my experience with frames and also an interview podcast with Sandi Hilal.</div>
+            <div class="ratio ratio-21x9">
+              <iframe src="./StudentsData/Nathan/Essay.pdf#toolbar=0"></iframe>
+            </div>
+            <div class="p text-muted text-center pt-2">Interview Podcast With Sandi Hilal:</div>
+            <div class="d-flex justify-content-center py-2">
+            <audio controls>
+              <source src="./StudentsData/Nathan/Frames.m4a" type="audio/x-m4a">
+                Your browser does not support the audio element.
+            </audio>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Nathan Jacob</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 7 Modal -->
+    <div class="modal fade" id="Modal7" tabindex="-1" aria-labelledby="Modal7Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal7Label">The Majlis: An Aged Perspective</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2">In this video interview with my grandfather, Mohammed Al Fahim, he speaks about the significance of the majlis in his life and in the UAE culture. He explains that the majlis is a traditional gathering place where men come together to discuss community issues, business, and politics. For him, it is a place where he can share stories and advice with other men, learn from them, and form important connections. He shares some of his own personal experiences in the majlis and how it helped him in his personal and professional life. He also explains that the majlis is an important way for people to stay connected and informed about community issues and events. Overall, he conveys a deep appreciation for the cultural and social significance of the majlis and its role in the Emirati society.</div>
+            <div class="ratio ratio-21x9">
+              <iframe src="https://drive.google.com/file/d/1Jm7qhU0BrXmnNRj685tU0fBoMofzPpKo/preview" allowfullscreen></iframe>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Ahmad Harmoozi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 8 Modal -->
+    <div class="modal fade" id="Modal8" tabindex="-1" aria-labelledby="Modal8Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal8Label">The Tree School Global Network</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2">Representation and Identity are significant discourses in the Tree School Project. Participants of the concrete tent Select one Picture and Commentary on why they Identify with or feel that the particular picture represents certain aspects of their life and Identity.</div>
+            <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/nsg83xhvry382san" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Bedan Maiywa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 9 Reflections Modal -->
+    <div class="modal fade" id="Modal9" tabindex="-1" aria-labelledby="Modal9Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="Modal9Label">Reflections Journal</h1>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="p text-center pb-2"> The <i>Reflections Journal</i> project records the day-to-day reflections from the students, written during the <i>Learning From The Living Room</i> course. The students reflected upon their thoughts and feelings amidst the start of the course in a traditional classroom at NYU Abu Dhabi, the trip to Alserkal Arts Foundation in Dubai and the activation of the Tree School, and the last week of the course in the concrete tent at NYU Abu Dhabi.</div>
+            <div class="ratio ratio-16x9">
+              <iframe src="./StudentsData/Ehtisham/RJ.pdf"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="p text-center">By Ehtisham Ul Haq</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="PicTree">
+      <img class = "TreeImg" src="./Images/Tree.png" alt="Photos Tree">
+      <div class="h3 text-center">Learning From The Trees</div>
+      <div class="h5 text-center py-2 px-5 mx-5"><i>Learning From The Trees</i> curates all the creative projects by the NYU Abu Dhabi students who participated in the activation of the tree school at Alserkal Arts Foundation. This platform features student-created projects in the form of videos, audios, photos, stories, and other media. The students spent second part of their course <i>Learning From The Living Room</i> with Alserkal Arts Foundation in Dubai and the last part of the course at a concrete tent at NYU Abu Dhabi, where they set up their art stations to produce their creative projects centered on the concept of The Tree School.
+      </div>
+      <div class="h5 text-muted text-center px-5 mx-5"> Curated By Ehtisham Ul Haq and Himanshi Lalwani </div>
+    </div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- Meet The Team-->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container mx-auto py-8">
+
+        <div class="flex flex-col text-center gap-4 mb-8 p-4">
+
+
+            <div class="text-gray-900 text-3xl md:text-4xl font-bold">Our Team</div>
+
+        </div>
+        <div class="flex items-center flex-wrap gap-5 p-4">
+            <div class="card" style="width: auto;">
+
+                <img src="./Images/sandi.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Sandi Hilal</div>
+
+
+                <div class="text-gray-600" style="text-align: justify;">My name is Sandi Hilal, I was 14 when I gained
+                    my first glimpse of joy and resilience in learning during the First Intifada in Palestine, when
+                    schools and universities were shut down, and a series of curfews were imposed by the Israeli
+                    military occupation on cities, villages, and refugee camps. In my community, as in other communities
+                    in Palestine, we insisted that schooling must continue and that all uncultivated land in the
+                    neighborhood must be planted to ensure that our daily needs would be met. Within a few days, a
+                    neighborhood school was formed. Every member of the community made their garages and living rooms
+                    available, transforming them into classrooms where mothers, fathers, sisters, brothers, aunts,
+                    uncles, and grandparents became teachers in their own houses. I studied at the neighborhood school
+                    for a long time, participating in the planting of fruit and vegetables and patiently waiting, like
+                    everyone else, for harvest season. </div>
+
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap gap-5 p-4" style="justify-content: space-between;">
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/nathan.png"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Nathan Jacob</div>
+
+
+                <div class="text-gray-600" style="text-align: justify;">Hi, Nathan here - a Freshman at NYUAD. I am from
+                    Kerala, the south of India,
+                    but was born and raised in the U.A.E. If I were to breakdown my identity I would say that I am a
+                    Chrisitan, close to my family, loyal to my friends, and love football (come on you Gunners). </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/rose.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Rose Chen</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Nihao, my name is Rose from China. I am a junior
+                    at NYUAD double majoring in
+                    Social Research and Public Policy and Music Study. In my spare time, I like to listen to live jazz,
+                    go to the opera or the musical. These are the best outlets for me to vent all kinds of stress in my
+                    life.
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/diana.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Diana Alibekova</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Salem, I am Diana, a daughter of Kazakhs,
+                    born on the endless steppes of nomads.
+                    Being interested in film and drawings, surprisingly majored in law and stats.
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/ehtisham.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Ehtisham Ul Haq</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hi, I am Ehtisham. I am studying Computer
+                    Science and Interactive Media at NYU Abu Dhabi. I am passionate about art and media as a powerful tool for social and political
+                    change. I love playing and making story-based video games. And I also love traveling and exploring new places (especially mountains)!
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/alya.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Alya AlKhemeiri</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hello! I’m Alya, a film major. I love to travel,
+                    cook, and express myself
+                    through different forms of art. If I could describe myself I would say open minded, free spirited,
+                    and control freak, but I’m working on it.
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/fatma.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Fatma Arif Albastaki</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hello everyone! My name is Fatma Albastaki and
+                    I’m a senior at NYUAD studying
+                    Mathematics. I am from Dubai originally, but I live on campus and call both Dubai and Abu Dhabi
+                    home. I hope to pursue a career in investment banking and have some work experience abroad after
+                    graduation. My interests include travel, weightlifting, and football :)
+                </div>
+
+
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/yasmin.png"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Yasmin Alshurafa</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hello Everyone! I am Yasmin, an Emirati
+                    undergraduate student at NYUAD. I am
+                    currently a senior pursuing a major in Interactive Media with double minors in Visual Arts and
+                    Design. The art world has always been interesting to me; everything art and technology related grabs
+                    my attention. I love having a cup of coffee alone in the morning and a piece of dessert with my
+                    loved ones at night.</div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/dilnaz.png"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Dilnaz Amantayeva</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hi everyone! My name is Dilnaz, I call
+                    Kazakhstan my home and I’m a student at NYU Abu Dhabi studying Economics and Interactive Media
+                    because of my interest in the intersection of finance and technology :) In my free time, I love
+                    journaling, when I take time to reflect on my actions, decisions and plans, as well as making videos
+                    and photography (both film and digital).</div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/nadia.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Nadia Chan</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hey everyone! My name is Nadia and I’m a
+                    freshman from Malaysia, majoring in
+                    Econ. I’m a Pisces, East Asian (so I love eating fish), and did (synchronized) swimming for quite a
+                    few years, so I guess you could say it’s almost like I have a fish on my face.</div>
+
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/cadence.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Cadence Cheah</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hi! I’m Cadence. I enjoy learning and expressing
+                    myself through different
+                    forms of art-making from poetry to theater; and I’m a true liberal arts student with three minors
+                    lol. Also, as a proud tropical kid, I struggle with borderline hypothermia at 18 degrees.
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/ahmad.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Ahmad Harmoozi</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hey everyone, I’m Ahmad! I’m an Emirati freshman
+                    at NYUAD and am majoring in
+                    Economics. I enjoy spending quality time with my family and friends. I also love to travel around
+                    the world and explore different cultures. Additionally, I like playing tennis, padel, football, and
+                    basketball. (Man City and Celtics fan of course!)
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/kotryna.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Kotryna Karpauskaite</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hi, my name is Kotryna and I’m a sophomore from
+                    Lithuania. I’m studying
+                    Economics and Environmental Studies at NYUAD. I enjoy learning new languages, travelling, as well as
+                    photography and literature. I also love being outdoors - during the summer, you can find me either
+                    camping, kayaking or walking my dog.</div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/himanshi.jpeg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Himanshi Lalwani</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hi! I am Himanshi. I am a junior studying
+                    Computer Science. I was born and
+                    raised in Indore, India. In my free time, you would find me reading a book, watching reels, or
+                    taking long walks around the highline with my friends.</div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/bedan.jpg"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Bedan Maiywa</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hello everyone! My name is Bedan and I am a
+                    freshman at NYUAD still undecided
+                    between Computer Science and Mathematics. I am from Kenya in East Africa and now stationed at Abu
+                    Dhabi, UAE. My interests include politics, playing video games, cheering for my favorite club
+                    Chelsea and watching Documentaries.
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/kartikey.png"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Kartikey Singhal</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hello! I am Kartikey, a senior trying to study
+                    computer science and
+                    mathematics at NYUAD. I can often be found aggressively discussing a football game in my room. If in
+                    a bad mood, visit me to hear one of my “amazing”(citation needed) jokes. I can talk for hours on pop
+                    culture, sports and weird facts. Feel free to talk to me about Manchester United, the cringiest
+                    bollywood movies, obscure music genres, the wonderful math and the abysmal CS dept.</div>
+
+            </div>
+
+            <div class="card" style="height: 550px; justify-content: start;">
+
+                <img src="./Images/ibad.png"
+                    class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Ibad Hasan</div>
+
+                <div class="text-gray-600" style="text-align: justify;">Hi, I’m Ibad. I am double majoring in Film and
+                    New Media and Literature and
+                    Creative Writing. Academically, I am interested in postcolonial literature and media, exploring
+                    film’s potential to excavate stories about marginalized identities. I also love traveling and taking
+                    pictures of everything, from my friends in bed to Abu Dhabi’s beautiful soaring skyline.</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JS Scipt from bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+
+</html>
